@@ -1,0 +1,8 @@
+{% assign nav_links = site.pages | sort: 'navigation_weight' %}
+{% for link in nav_links %}
+    {% if link.navigation_weight %}
+        <li {% if page.url == link.url %}class="active" {% endif %}>
+            <a href="{{ link.url | absolute }}">{{ link.title }}</a>
+        </li>
+    {% endif %}
+{% endfor %}

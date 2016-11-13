@@ -1,0 +1,32 @@
+---
+layout: html
+---
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome</h1>
+        <p>This is a showcase portfolio of my design/development skills</p>
+    </div>
+    <div class="hero-bottom-shadow"></div>
+</section>
+
+
+<div class="container front">
+    <h2>Here is some of my work</h2>
+    <div class="image-gallery front">
+        {% for project in site.portfolio %}
+            <div class="image-gallery-item">
+                <a href="{{ project.url }}" style="background-image: url('{{ project.image_url }}')">
+                    <h2 class="image-gallery-image-title">{{ project.title }}</h2>
+                    <div class="portfolio-keywords front">
+                        {% include portfolio_keywords_loop.html set=project %}
+                    </div>
+                    <div class="image-gallery-item-hover-overlay"></div>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <a class="btn btn-primary front-page-cta" href="/portfolio/">See More</a>
+    
+</div>

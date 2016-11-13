@@ -1,0 +1,5 @@
+<span class="glyphicon glyphicon-tag"></span>
+{% assign loop = include.set %}
+{% for keyword in loop.keywords %}
+    <li class="portfolio-keywords-keyword">{{ keyword }}</li>
+{% endfor %}

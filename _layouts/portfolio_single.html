@@ -1,0 +1,9 @@
+---
+layout: page
+---
+
+<ul class="portfolio-keywords">
+    {% include portfolio_keywords_loop.html set=page %}
+</ul>
+<img class="featured-image"src="{{ page.image_url }}">
+{{ content }}

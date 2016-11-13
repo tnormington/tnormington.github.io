@@ -1,0 +1,21 @@
+.navbar {
+    box-shadow: 0 4px 25px rgba(black, 0.35);
+    background-color: white;
+    .navbar-toggle {
+        border: 1px solid $blue;
+        .icon-bar {
+            background-color: $blue;
+        }
+    }
+    .navbar-nav {
+        li.active {
+            border-bottom: 3px solid $blue;
+        }
+        li a {
+            &:hover {
+                color: $red;
+                background-color: white;
+            }
+        }
+    }
+}

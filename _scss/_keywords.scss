@@ -1,0 +1,21 @@
+// Keywords
+.portfolio-keywords {
+    list-style-type: none;
+    padding: 0;
+    margin: 1em 0;
+    span {
+        margin-right: 0.5em;
+    }
+    .portfolio-keywords-keyword {
+        font-size: 0.8em;
+        display: inline-block;
+        padding: 0.5em;
+        border: 1px solid lighten(desaturate($blue, 0.2), 30%);
+        border-radius: 3px;
+        margin-right: 0.5em;
+        margin-bottom: 0.5em;
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
