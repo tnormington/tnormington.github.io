@@ -15,15 +15,17 @@ layout: html
     <h2>Here is some of my work</h2>
     <div class="image-gallery front">
         {% for project in site.portfolio %}
-            <div class="image-gallery-item">
-                <a href="{{ project.url }}" style="background-image: url('{{ project.image_url }}')">
-                    <h2 class="image-gallery-image-title">{{ project.title }}</h2>
-                    <div class="portfolio-keywords front">
-                        {% include portfolio_keywords_loop.html set=project %}
-                    </div>
-                    <div class="image-gallery-item-hover-overlay"></div>
-                </a>
-            </div>
+            {% if project.featured %}
+                <div class="image-gallery-item">
+                    <a href="{{site.github.url}}{{ project.url }}" style="background-image: url('{{site.github.url}}/assets/images/portfolio/{{ project.image_url }}')">
+                        <h2 class="image-gallery-image-title">{{ project.title }}</h2>
+                        <div class="portfolio-keywords front">
+                            {% include portfolio_keywords_loop.html set=project %}
+                        </div>
+                        <div class="image-gallery-item-hover-overlay"></div>
+                    </a>
+                </div>
+            {% endif %}
         {% endfor %}
     </div>
 

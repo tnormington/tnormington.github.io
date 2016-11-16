@@ -5,5 +5,8 @@ layout: page
 <ul class="portfolio-keywords">
     {% include portfolio_keywords_loop.html set=page %}
 </ul>
-<img class="featured-image"src="{{ page.image_url }}">
+<img class="featured-image"src="{{site.github.ur}}/assets/images/portfolio/{{ page.image_url }}">
+<a href="{{page.website_url}}" target="_blank" class="project-link">
+    <span class="glyphicon glyphicon-new-window"></span>Live Project
+</a>
 {{ content }}
