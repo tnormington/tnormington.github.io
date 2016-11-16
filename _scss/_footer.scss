@@ -1,3 +1,22 @@
 .footer {
     background-color: $dark_purple;
+    margin-top: 1em;
+    a {
+        color: $red;
+    }
+    .footer-menu {
+        margin: 1em 0;
+        padding: 0;
+        text-align: center;
+        a {
+            margin: 0 auto;
+            display: block;
+            padding: 0.5em 0;
+            border-bottom: 1px solid $purple;
+            max-width: 300px;
+        }
+        li:last-of-type a {
+            border-bottom: none;
+        }
+    }
 }
